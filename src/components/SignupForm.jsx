@@ -1,13 +1,16 @@
 import React from 'react'
 
 const SignupForm = () => {
+  const submitform = ()=>{
+    
+  }
   return (
     <div>
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
         <div className="bg-white shadow-md rounded-lg p-8 max-w-sm w-full">
           <h2 className="text-2xl font-bold text-center mb-6">Registration Forn</h2>
 
-          <form>
+          <form onSubmit={submitform}>
             <div className="mb-4">
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
               <div className="flex items-center border border-gray-300 rounded">

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
-// import LoginForm from './components/LoginForm'
+import LoginForm from './components/LoginForm'
 import SignupForm from './components/SignupForm'
 
 function App() {
@@ -9,8 +9,8 @@ function App() {
 
   return (
    <div>
-    {/* <LoginForm /> */}
-    <SignupForm />
+    <LoginForm />
+    {/* <SignupForm /> */}
    </div>
   )
 }

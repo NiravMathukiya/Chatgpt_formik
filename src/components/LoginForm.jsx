@@ -22,9 +22,10 @@ const LoginForm = () => {
         errors.password = 'Password is required';
       } else if (values.password.length < 8) {
         errors.password = 'Password must be at least 8 characters';
-      } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/.test(values.password)) {
-        errors.password = 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character';
-      }
+      } 
+      // else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/.test(values.password)) {
+      //   errors.password = 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character';
+      // }
 
       return errors;
     },
@@ -38,7 +39,8 @@ const LoginForm = () => {
             
            
             formik.setFieldValue('password', response.data.password);
-            window.location.href = "/"
+           formik.setFieldValue('email', response.data.email);
+            // window.location.href = "/"~
           })
           .catch((error) => {
             console.error('Error:', error);
